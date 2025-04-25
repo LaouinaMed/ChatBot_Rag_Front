@@ -1,0 +1,19 @@
+
+<div class="page-wrapper">
+  <div class="chat-container">
+    <div class="messages">
+      <div *ngFor="let msg of messages" [ngClass]="msg.from">
+        <p>{{ msg.text }}</p>
+      </div>
+
+      <div class="bot" *ngIf="loading">
+        <p class="typing-dots">...</p>
+      </div>
+    </div>
+/
+    <div class="input-box">
+      <input [(ngModel)]="question" (keydown.enter)="sendQuestion()" placeholder="Posez votre question..." />
+      <button (click)="sendQuestion()">Envoyer</button>
+    </div>
+  </div>
+</div>
