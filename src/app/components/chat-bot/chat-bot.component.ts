@@ -20,7 +20,7 @@ export class ChatBotComponent {
 
   loading = false;
 
-  
+  //test
 
   sendQuestion() {
     if (this.question.trim()) {
